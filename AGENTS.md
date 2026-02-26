@@ -46,10 +46,28 @@
 
 ### 7. Git Hygiene
 
-- **Always create a new git branch for any change** (feature, bugfix, refactor, docs)
-- Keep branches scoped to one objective; avoid mixing unrelated changes
-- Use clear branch names (e.g. `fix/login-timeout`, `feat/fpx-webhook`, `chore/deps-bump`)
-- Open a PR/MR and link to the plan or ticket when applicable
+- Always write **clear, category-based** commit messages.
+- Format: `<type>(<scope>): <short summary>`
+- Types to use:
+  * `feat`: new feature
+  * `fix`: bug fix
+  * `chore`: maintenance / tooling / non-product work
+  * `docs`: documentation only
+  * `refactor`: code restructure (no behavior change)
+  * `perf`: performance improvement
+  * `test`: add/update tests
+  * `ci`: CI/CD changes
+  * `build`: build system / dependencies
+  * `style`: formatting only (no logic change)
+
+Examples:
+* `feat(fpx): add webhook signature verification`
+* `fix(login): handle timeout retry correctly`
+* `chore(deps): bump react to 19.0.2`
+* `docs(api): update FPX callback notes`
+* `refactor(settlement): extract fee calculator`
+* `ci(github): run tests on pull_request`
+
 
 ## Task Management
 
