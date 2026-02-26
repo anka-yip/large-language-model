@@ -12,9 +12,9 @@
 ### 2. Subagent Strategy
 
 - Use subagents liberally to keep the main context window clean
-- Offload research, exploration, and parallel analysis to subagents
+- Offload coding, research, exploration, and parallel analysis to subagents
 - For complex problems, throw more compute at it via subagents
-- One tack per subagent for focused execution
+- One task per subagent for focused execution
 
 ### 3. Self-Improvement Loop
 
