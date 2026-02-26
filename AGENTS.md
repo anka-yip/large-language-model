@@ -1,6 +1,8 @@
-- add always use new git branch for changes
+
 
 ## Workflow Orchestration
+
+### ALWAYS USE PARALLEL TOOLS WHEN APPLICABLE
 
 ### 1. Plan Node Default
 
@@ -77,6 +79,36 @@ Examples:
 4. **Explain Changes**: High-level summary at each step
 5. **Document Results**: Add a review section to `tasks/todo.md`
 6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
+
+## Coding Style
+
+### Avoid `else` statements. Prefer early returns.
+
+```ts
+// Good
+function foo() {
+  if (condition) return 1
+  return 2
+}
+
+// Bad
+function foo() {
+  if (condition) return 1
+  else return 2
+}
+```
+
+### Reduce total variable count by inlining when a value is only used once.
+
+```ts
+// Good
+const journal = await Bun.file(path.join(dir, "journal.json")).json()
+
+// Bad
+const journalPath = path.join(dir, "journal.json")
+const journal = await Bun.file(journalPath).json()
+```
+
 
 ## Core Principles
 
